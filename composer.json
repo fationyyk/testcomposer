@@ -11,6 +11,9 @@
     "require": {
         "php": ">=5.3.0"
     },
+    "extra": {
+        "class": "Fationyyk\\Testcomposer\\plugin"
+    },
     "autoload": {
         "psr-4": {
             "Fationyyk\\Testcomposer\\": "src/"

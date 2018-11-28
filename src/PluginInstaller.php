@@ -18,8 +18,7 @@ class PluginInstaller extends LibraryInstaller
     public function getPackageBasePath(PackageInterface $package)
     {
         $prefix = ($package->getPrettyName());
-        echo $prefix;die;
-        return 'data/templates/'.substr($package->getPrettyName(), 23);
+        return './data/templates/'.substr($package->getPrettyName(), 13);
     }
 
     /**

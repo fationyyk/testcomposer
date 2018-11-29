@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "fationyyk/testcomposer": "dev-master",  
+        "fationyyk/testcomposer": "dev-master"
     },
     "extra": {
         "class": "Fationyyk\\Testcomposer\\plugin"

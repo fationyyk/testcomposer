@@ -29,6 +29,7 @@ class PluginInstaller extends LibraryInstaller
      */
     public function supports($packageType)
     {
+        echo $packageType;die;
         return 'phpdocumentor-template' === $packageType;
     }
 }

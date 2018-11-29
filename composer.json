@@ -1,5 +1,5 @@
 {
-    "name": "fationyyk/testcomposer",
+    "name": "phpdocumentor/template-installer-plugin",
     "type" : "composer-plugin",
     "description": "testcomposer",
     "authors": [

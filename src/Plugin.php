@@ -1,11 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: pc
- * Date: 2018/11/28
- * Time: 23:31
- */
-namespace Fationyyk\Testcomposer;
+
+namespace phpDocumentor\Composer;
 
 use Composer\Composer;
 use Composer\IO\IOInterface;
@@ -15,7 +10,7 @@ class Plugin implements PluginInterface
 {
     public function activate(Composer $composer, IOInterface $io)
     {
-        $installer = new PluginInstaller($io, $composer);
+        $installer = new TemplateInstaller($io, $composer);
         $composer->getInstallationManager()->addInstaller($installer);
     }
 }

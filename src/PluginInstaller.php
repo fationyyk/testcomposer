@@ -13,7 +13,7 @@ class PluginInstaller extends LibraryInstaller
     public function getInstallPath(PackageInterface $package)
     {
         $prefix = substr($package->getPrettyName(), 0, 23);
-   
+        echo $prefix;
         if ('phpdocumentor/template-' !== $prefix) {
             throw new \InvalidArgumentException(
                 'Unable to install template, phpdocumentor templates '

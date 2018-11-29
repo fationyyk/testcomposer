@@ -12,6 +12,7 @@ class PluginInstaller extends LibraryInstaller
      */
     public function getInstallPath(PackageInterface $package)
     {
+        echo $package->getPrettyName();
         $prefix = substr($package->getPrettyName(), 0, 23);
         echo $prefix;
         if ('phpdocumentor/template-' !== $prefix) {

@@ -12,7 +12,7 @@
         "composer-plugin-api": "*"
     },
     "extra": {
-        "class": "Fationyyk\\Testcomposer\\Plugin"
+        "class": "fationyyk\\testcomposer\\Plugin"
     },
     "autoload": {
         "psr-4": {

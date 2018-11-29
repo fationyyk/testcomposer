@@ -1,11 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: pc
- * Date: 2018/11/28
- * Time: 23:33
- */
-namespace Fationyyk\Testcomposer;
+
+namespace fationyyk\testcomposer;
 
 use Composer\Package\PackageInterface;
 use Composer\Installer\LibraryInstaller;
@@ -17,9 +12,16 @@ class PluginInstaller extends LibraryInstaller
      */
     public function getPackageBasePath(PackageInterface $package)
     {
-        $prefix = ($package->getPrettyName());
-        echo $prefix;die;
-        return './data/templates/'.substr($package->getPrettyName(), 13);
+        $prefix = substr($package->getPrettyName(), 0, 23);
+        if ('phpdocumentor/template-' !== $prefix) {
+            throw new \InvalidArgumentException(
+                'Unable to install template, phpdocumentor templates '
+                .'should always start their package name with '
+                .'"phpdocumentor/template-"'
+            );
+        }
+
+        return 'data/templates/'.substr($package->getPrettyName(), 23);
     }
 
     /**
@@ -27,6 +29,6 @@ class PluginInstaller extends LibraryInstaller
      */
     public function supports($packageType)
     {
-        return 'fation-test' == $packageType;
+        return 'phpdocumentor-template' === $packageType;
     }
 }

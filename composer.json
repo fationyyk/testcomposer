@@ -1,6 +1,6 @@
 {
     "name": "fationyyk/testcomposer",
-    "type" : "fation-test",
+    "type" : "composer-plugin",
     "description": "testcomposer",
     "authors": [
         {

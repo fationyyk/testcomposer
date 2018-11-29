@@ -12,7 +12,7 @@ class Plugin implements PluginInterface
     {
         echo '111111';
         $installer = new PluginInstaller($io, $composer);
-        var_dump($installer);
+      
         $composer->getInstallationManager()->addInstaller($installer);
     }
 }

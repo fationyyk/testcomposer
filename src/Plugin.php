@@ -1,6 +1,6 @@
 <?php
 
-namespace phpDocumentor\Composer;
+namespace fationyyk\testcomposer;
 
 use Composer\Composer;
 use Composer\IO\IOInterface;

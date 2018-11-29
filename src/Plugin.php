@@ -10,7 +10,7 @@ class Plugin implements PluginInterface
 {
     public function activate(Composer $composer, IOInterface $io)
     {
-        echo '111'; die;
+       
         $installer = new PluginInstaller($io, $composer);
         $composer->getInstallationManager()->addInstaller($installer);
     }
